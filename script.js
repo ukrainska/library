@@ -28,8 +28,8 @@ function showBooks() {
     }
 }
 
-const book1 = new Book("MMmmasd", "K. Milly", 1993, 230, "dfgsf-sdfsd-sdf2");
+/*const book1 = new Book("MMmmasd", "K. Milly", 1993, 230, "dfgsf-sdfsd-sdf2");
 const book2 = new Book("Daisies", "Michael May", 2012, 145, "sdf-erws-gfd");
 library.push(book1);
 library.push(book2);
-showBooks();
+showBooks();*/
