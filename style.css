@@ -5,8 +5,11 @@
 }
 
 :root {
-    --main-color: #A9D9CB;
-    --header-color: #8ECDBB;
+    --main-color: #DFDAD8;
+    --header-color: #B6ABA5;
+    --book-cover: #F4F2F1;
+    --book-layer: #CAC3BE;
+    --button-cover: #8A7A71;
 }
 
 .container {
@@ -22,6 +25,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.8rem 2rem;
+    font-size: 1.2rem;
     background-color: var(--header-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     border-radius: 8px;
@@ -47,10 +51,57 @@
     gap: 100px;
 }
 
+.books {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    place-items: center;
+    position: relative;
+}
+
+.book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--book-cover);
+    width: 25rem;
+    height: 28rem;
+    transition: all 0.5s ease;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.left {
+    grid-column: 1;
+    background-color: var(--book-layer);
+    transform: translateX(40%) scale(0.85) rotate(-8deg);
+    opacity: 0.7;
+    z-index: 1;
+}
+
+.center {
+    grid-column: 2;
+    background-color: var(--book-cover);
+    transform: scale(1);
+    z-index: 3;
+}
+
+.right {
+    grid-column: 3;
+    transform: translateX(-40%) scale(0.85) rotate(8deg);
+    opacity: 0.7;
+    z-index: 1;
+    background-color: var(--book-layer);
+}
+
+
 .scroll-button {
     width: 80px;
     padding: 10px;
     border-radius: 40px;
+    color: var(--book-cover);
+    background-color: var(--button-cover);
+    border-style: none;
 }
 
 select {
