@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -13,8 +16,8 @@
 }
 
 .container {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr;
     background-color: var(--main-color);
@@ -25,10 +28,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.8rem 2rem;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    font-family: "Macondo Swash Caps", Arial, sans-serif;
     background-color: var(--header-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    border-radius: 8px;
+    border-radius: 0 0 8px 8px;
 }
 
 .nav {
@@ -38,16 +43,34 @@
     gap: 20px;
 }
 
+.sidebar {
+    display: flex;
+    gap: 50px;
+}
+
+.header-b {
+    padding: 0.8rem 2rem;
+    border-radius: 10px;
+    background-color: var(--book-cover);
+    border-style: none;
+}
+
+.header-b:hover {
+    background-color: var(--main-color);
+}
+
 .content {
     grid-row: 2;
+    display: grid;
 }
+
 
 .book-display {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height:100vh;
+    width: 100%;
+    min-height: calc(100vh - 80px);;
     gap: 100px;
 }
 
@@ -60,15 +83,17 @@
 }
 
 .book {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-rows: auto auto;
+    place-items: center;
+    padding: 0.8rem 2rem;
     background-color: var(--book-cover);
     width: 25rem;
     height: 28rem;
     transition: all 0.5s ease;
     border-radius: 1rem;
     position: relative;
+    font-family: "Delius Swash Caps", Arial, Helvetica, sans-serif;
 }
 
 .left {
@@ -77,6 +102,14 @@
     transform: translateX(40%) scale(0.85) rotate(-8deg);
     opacity: 0.7;
     z-index: 1;
+}
+
+.left:hover,
+.center:hover,
+.right:hover {
+    scale: 1.1;
+    opacity: 1;
+    z-index: 4;
 }
 
 .center {
@@ -94,6 +127,10 @@
     background-color: var(--book-layer);
 }
 
+.title {
+    max-width: 100%;
+    max-height: 100%;
+}
 
 .scroll-button {
     width: 80px;
@@ -111,6 +148,7 @@ select {
 }
 
 input {
+    font-family: "Macondo Swash Caps", Arial, sans-serif;
     border-radius: 10px;
     padding: 0.5rem;
 }
