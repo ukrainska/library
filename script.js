@@ -1,8 +1,16 @@
+const addBookB = document.querySelector(".addBookB");
+const removeBookB = document.querySelector(".removeBookB");
+
+
 const library = [];
 let bookName;
 let author;
 let year;
 let pages;
+
+addBookB.addEventListener("click", () => {
+    alert("Hello");
+})
 
 function Book(name, author, year, pages, id) {
     this.name = name;

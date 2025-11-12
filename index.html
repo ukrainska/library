@@ -10,8 +10,8 @@
     <div class="container">
         <div class="header">
             <div class="sidebar">
-                <button class="header-b">Add New Book</button>
-                <button class="header-b">Remove A Book</button>
+                <button class="addBookB header-b">Add New Book</button>
+                <button class="removeBookB header-b">Remove A Book</button>
             </div>
             <div class="logo">Books Mori</div>
             <div class="nav">
@@ -39,6 +39,35 @@
                 <button class="scroll-button">Next</button>
             </div>
         </div>
+
+        <form>
+            <legend>Book Entry</legend>
+            <div>
+                <label>Book Name</label>
+                <input>
+            </div>
+            <div>
+                <label>Author</label>
+                <input>
+            </div>
+            <div>
+                <label>Year</label>
+                <input>
+            </div>
+            <div>
+                <label>Pages</label>
+                <input>
+            </div>
+            <fieldset>
+                <legend>Status of reading</legend>
+                <input type="checkbox" id="read" name="reading" value="read">
+                <label for="read">read</label>
+                <input type="checkbox" id="notread" name="reading" value="notread">
+                <label for="notread">not read</label>
+            </fieldset>
+            
+        </form>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
