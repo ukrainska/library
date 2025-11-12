@@ -41,31 +41,31 @@
         </div>
 
         <form>
-            <legend>Book Entry</legend>
-            <div>
-                <label>Book Name</label>
+            <legend id="book-entry">Book Entry</legend>
+            <div class="second-row">
+                <label>Title</label>
                 <input>
             </div>
-            <div>
+            <div class="second-row">
                 <label>Author</label>
                 <input>
             </div>
-            <div>
+            <div class="third-row">
                 <label>Year</label>
                 <input>
             </div>
-            <div>
+            <div class="third-row">
                 <label>Pages</label>
                 <input>
             </div>
-            <fieldset>
-                <legend>Status of reading</legend>
-                <input type="checkbox" id="read" name="reading" value="read">
+            <fieldset class="reading-status">
+                <legend>Reading status</legend>
+                <input type="radio" id="read" name="reading" value="read">
                 <label for="read">read</label>
-                <input type="checkbox" id="notread" name="reading" value="notread">
+                <input type="radio" id="notread" name="reading" value="notread">
                 <label for="notread">not read</label>
             </fieldset>
-            
+            <button class="submit-button">Submit</button>  
         </form>
     </div>
     <script src="script.js"></script>
