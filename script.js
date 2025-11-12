@@ -1,5 +1,7 @@
 const addBookB = document.querySelector(".addBookB");
 const removeBookB = document.querySelector(".removeBookB");
+const popupForm = document.querySelector(".popup-form");
+const submitB = document.querySelector(".submit-button");
 
 
 const library = [];
@@ -9,7 +11,20 @@ let year;
 let pages;
 
 addBookB.addEventListener("click", () => {
-    alert("Hello");
+    popupForm.classList.toggle("active");
+})
+
+submitB.addEventListener("click", (event) => {
+    event.preventDefault();
+    popupForm.style.opacity = "0";
+    popupForm.style.transform = "translate(-50%, -50%) scale(0.8)";
+
+    sertTimeout(() => {
+        popupForm.classList.remove("active");
+        popupForm.style.opacity = "";
+        popupForm.style.transform = "";
+        
+    }, 400);
 })
 
 function Book(name, author, year, pages, id) {
