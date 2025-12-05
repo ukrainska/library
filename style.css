@@ -71,14 +71,15 @@
     align-items: center;
     width: 100%;
     min-height: calc(100vh - 80px);;
-    gap: 100px;
+    gap: 2.5rem;
 }
 
 .books {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
     grid-template-rows: 1fr;
-    place-items: center;
+    justify-content: center;
     position: relative;
 }
 
@@ -88,12 +89,18 @@
     place-items: center;
     padding: 0.8rem 2rem;
     background-color: var(--book-cover);
-    width: 25rem;
+    max-width: 25rem;
     height: 28rem;
     transition: all 0.5s ease;
     border-radius: 1rem;
     position: relative;
     font-family: "Delius Swash Caps", Arial, Helvetica, sans-serif;
+}
+
+.book p,
+.book span {
+    width: 100%;
+    text-align: left;
 }
 
 .left {

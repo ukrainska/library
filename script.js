@@ -7,7 +7,14 @@ const title = document.querySelector("#title");
 const author = document.querySelector("#author");
 const year = document.querySelector("#year");
 const pages = document.querySelector("#pages");
-let radioButtons = document.querySelector('input[name="reading"]:checked');
+
+const bTitle = document.getElementById("b-title");
+const bAuthor = document.getElementById("b-author");
+const bYear = document.getElementById("b-year");
+const bPages = document.getElementById("b-pages");
+const bId = document.getElementById("b-id");
+
+const bookCenter = document.querySelector(".book.center");
 
 const library = [];
 let readingStatus;
@@ -55,11 +62,11 @@ function addBookToLibrary() {
         bookId, 
         readingStatus);
     library.push(book);
-}
 
-function showBooks() {
-    for (i = 0; i > library.length; i++){
-        console.log(library[i]);
-    }
+    bTitle.textContent = `Title: ${title.value}`;
+    bAuthor.textContent = `Author: ${author.value}`;
+    bYear.textContent = `Year: ${year.value}`;
+    bPages.textContent = `Pages: ${pages.value}`;
+    bId.textContent = `id: ${bookId}`;
 }
 
