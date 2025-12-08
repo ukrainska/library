@@ -1,3 +1,6 @@
+const bookDisplay = document.querySelector('.book-display');
+const deleteButtons = document.querySelectorAll(".delete-button");
+
 const addBookB = document.querySelector(".addBookB");
 const removeBookB = document.querySelector(".removeBookB");
 const popupForm = document.querySelector(".popup-form");
@@ -28,7 +31,6 @@ submitB.addEventListener("click", (event) => {
     popupForm.style.opacity = "0";
     popupForm.style.transform = "translate(-50%, -50%) scale(0.8)";
     addBookToLibrary();
-    showBooks();
 
     setTimeout(() => {
         popupForm.classList.remove("active");
@@ -37,6 +39,15 @@ submitB.addEventListener("click", (event) => {
         
     }, 400);
 });
+
+deleteButtons.forEach(button => {
+    button.addEventListener("click", (event) => {
+        const bookCard = event.target.closest(".book");
+        if (bookCard) {
+            bookCard.remove();
+        }
+    });
+})
 
 function Book(name, author, year, pages, id, readingStatus) {
     this.name = name;
@@ -69,4 +80,5 @@ function addBookToLibrary() {
     bPages.textContent = `Pages: ${pages.value}`;
     bId.textContent = `id: ${bookId}`;
 }
+
 

@@ -148,6 +148,14 @@
     border-style: none;
 }
 
+.delete-button {
+    background-color: var(--button-cover);
+    color: var(--book-cover);
+    opacity: 0.8;
+    padding: 6px;
+    border-radius: 10px;
+}
+
 /* Form */
 .popup-form {
     position: fixed;
