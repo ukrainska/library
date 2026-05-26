@@ -33,3 +33,6 @@ This project helped me practice DOM manipulation, form handling, JavaScript obje
 - Improve form validation
 - Add edit book feature
 - Improve mobile responsiveness
+
+## Live Demo
+[View live project] (https://ukrainska.github.io/library/)
