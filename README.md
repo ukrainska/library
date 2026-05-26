@@ -1,4 +1,4 @@
-# Books More Library
+# Books Mori Library
 
 A cozy library app built with HTML, CSS and JavaScript. 
 
